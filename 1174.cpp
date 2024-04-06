@@ -13,15 +13,18 @@ ll x,y;
 ll d,cnt; 
 ll f[N][N]; 
 char a[N][N]; 
+ll fx[4] = {0,0,-1,1}; 
+ll fy[4] = {1,-1,0,0}; 
 
 void dfs (long x,long y){
 if (x > 0 && y > 0 && x <= m && y <= n && f[x][y] != 1 && a[x][y] != '#'){
    f[x][y] = 1;
    d++;
-   dfs(x,y-1);
-   dfs(x,y+1);
-   dfs(x-1,y);
-   dfs(x+1,y);
+   for (long k=0; k<=4; k++){
+        ll i = x+fx[k]; 
+        ll j = y+fy[k]; 
+        dfs(i,j); 
+      }
    }
 }
 
