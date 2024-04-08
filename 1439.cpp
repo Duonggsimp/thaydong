@@ -19,10 +19,8 @@ int main(){
     cin >> n;
     i = 1;
     while (n > 0){
-        n -= j;
-        i++;
-        j += i;
-        res++;
+        n -= j; i++;
+        j += i; res++;
     }
 
     cout << res - 1;
