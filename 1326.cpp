@@ -23,7 +23,7 @@ int main(){
 
     sort(a+1,a+n+1); 
     for (long i=1; i<=n; i++){
-        res++;
+        res ++;
         vt = upper_bound(a+i+1,a+n+1,a[i]+k)-a; vt--;
         vt = upper_bound(a+vt+1,a+n+1,a[vt]+k)-a; vt--;
         i = vt;
