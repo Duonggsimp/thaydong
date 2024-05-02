@@ -36,8 +36,7 @@ int main(){
 
   cin >> k;
   s = fibo(k);
-
-  // cout << s << xn;
+   
   n = s.size();
   s = ' ' + s;
 
